@@ -3,8 +3,8 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def add_to_cart(self):
-        busket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_BUTTON)
-        busket_button.click()
+        add_to_cart_button = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_BUTTON)
+        add_to_cart_button.click()
 
     def product_name_in_added_message_control(self):
         assert self.is_element_present(*ProductPageLocators.PRODUCT_ADDED_MESSAGE), "Message is not presented"
