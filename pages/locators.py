@@ -19,4 +19,4 @@ class ProductPageLocators():
 
 class BasketPageLocators():
     BASKET_LIST = (By.CSS_SELECTOR, "#content_inner p")
-    EMPTY_BASKET_MSG = (By.CSS_SELECTOR, "#messages > div:nth-child(2)")
+    PRODUCT_THUMBNAIL = (By.CSS_SELECTOR, ".thumbnail")
