@@ -16,3 +16,8 @@ def test_guest_can_see_register_form(browser):
     page = LoginPage(browser, link)
     page.open()
     page.should_be_register_form()
+
+def test_registry(browser):
+    page = LoginPage(browser, link)
+    page.open()
+    page.register_new_user()
