@@ -41,10 +41,8 @@ class TestUserAddToBasketFromProductPage():
 
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
-        page = ProductPage(browser, link)
+        page = LoginPage(browser, "http://selenium1py.pythonanywhere.com/accounts/login/")
         page.open()
-        page.go_to_login_page()
-        page = LoginPage(browser, link)
         page.register_new_user()
         page.should_be_authorized_user()
 
