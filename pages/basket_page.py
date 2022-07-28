@@ -5,8 +5,8 @@ from .locators import BasketPageLocators
 class BasketPage(BasePage):
 
     def cart_should_be_empty(self):
-        list = self.browser.find_elements(*BasketPageLocators.BASKET_LIST)
-        assert len(list) == 1, "Cart is not empty"
+        rows = self.browser.find_elements(*BasketPageLocators.BASKET_LIST)
+        assert len(rows) == 1, "Cart is not empty"
 
     def empty_cart_text_control(self):
         language = self.browser.execute_script(
@@ -39,6 +39,6 @@ class BasketPage(BasePage):
              "Incorrect empty cart message"
 
     def should_not_be_product_added(self):
-            assert self.is_not_element_present(*BasketPageLocators.PRODUCT_THUMBNAIL), \
+        assert self.is_not_element_present(*BasketPageLocators.PRODUCT_THUMBNAIL), \
                 "Product was added unintentionally"
 
