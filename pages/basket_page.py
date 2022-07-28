@@ -35,8 +35,8 @@ class BasketPage(BasePage):
             "zh-cn": "Your basket is empty.",
         }
 
-        assert languages.get(language) in self.browser.find_element(*BasketPageLocators.BASKET_LIST).text , \
-             "Incorrect empty cart message"
+        assert languages.get(language) in self.browser.find_element(*BasketPageLocators.BASKET_LIST).text, \
+               "Incorrect empty cart message"
 
     def should_not_be_product_added(self):
         assert self.is_not_element_present(*BasketPageLocators.PRODUCT_THUMBNAIL), \

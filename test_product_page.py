@@ -44,7 +44,7 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page.should_not_be_product_added()
 
 
-class TestUserAddToBasketFromProductPage():
+class TestUserAddToBasketFromProductPage:
 
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
