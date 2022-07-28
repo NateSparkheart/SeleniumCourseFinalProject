@@ -1,4 +1,4 @@
-# SeleniumCourseFinalProject
+# Selenium Course Final Project
 Итоговый проект курса по автоматизации тестирования с помощью Selenium + Python  
 Предусмотрена установка модуля "faker" для метода регистрации нового пользователя (register_new_user), (имеется в requirements.txt)  
 Для метода проверки текста сообщения о пустой корзине (empty_cart_text_control) реализована проверка с учетом различных языков интерфейса  
